@@ -1,0 +1,11 @@
+---
+  - name: Clone Camarilla
+    hosts: prod
+    tasks:
+      - name: Clone the Camarilla repository
+        git:
+          repo: git@github.com:brett-buskirk/camarilla.git
+          dest: /home/brett/camarilla/
+          clone: yes
+          update: yes
+          accept_hostkey: yes

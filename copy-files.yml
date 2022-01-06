@@ -1,0 +1,11 @@
+---
+  - name: Copy Files
+    hosts: prod
+    tasks:
+      - name: Copy .env file to remote server
+        become: true
+        copy:
+          src: /home/brett/camarilla-project/python-camarilla/.env
+          dest: /home/brett/camarilla
+          owner: brett
+          mode: 0644
